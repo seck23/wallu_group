@@ -13,6 +13,8 @@ export const projects = [
 
     tags: ["IA", "GovTech", "NLP"],
 
+    image: "/images/projets/tontouma-bot.jpg",
+
     status: "En développement",
 
     problem:
@@ -54,6 +56,8 @@ export const projects = [
 
     tags: ["Tourisme", "Digital", "VR"],
 
+    image: "/images/projets/sentourism-esplanade.jpg",
+
     status: "En développement",
 
     problem:
@@ -93,6 +97,8 @@ export const projects = [
       "Sénégal-Rek est une initiative qui utilise les technologies numériques et l'intelligence artificielle pour valoriser les connaissances, les histoires et les réalités du Sénégal.",
 
     tags: ["IA", "Culture", "Innovation"],
+
+    image: undefined as string | undefined,
 
     status: "Concept",
 

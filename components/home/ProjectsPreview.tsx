@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../../data/projects";
 export default function ProjectsPreview() {
@@ -36,11 +37,24 @@ export default function ProjectsPreview() {
               </div>
 
               <div className="project-card-visual">
-                <div className="project-glow" />
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    sizes="(max-width: 900px) 90vw, 400px"
+                    className="project-card-photo"
+                  />
+                ) : null}
+                {project.image ? null : (
+                  <>
+                    <div className="project-glow" />
 
-                <span className="project-number-large">
-                  {project.number}
-                </span>
+                    <span className="project-number-large">
+                      {project.number}
+                    </span>
+                  </>
+                )}
               </div>
 
               <div className="project-card-content">

@@ -2,73 +2,47 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="hero-background">
-        <div className="hero-orb hero-orb-one" />
-        <div className="hero-orb hero-orb-two" />
-      </div>
+    <section className="hero-video">
+      <video
+        className="hero-video-media"
+        src="/videos/hero.mp4"
+        poster="/images/hero.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
 
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="hero-badge-dot" />
-            Innovation technologique africaine
-          </div>
+      <div className="hero-video-shade" />
 
-          <h1>
-            Nous créons la technologie
-            <span> qui fait avancer l'Afrique.</span>
-          </h1>
-
-          <p>
-            Wallu Group conçoit des solutions numériques innovantes,
-            accessibles et utiles pour répondre aux défis d'aujourd'hui et
-            construire les opportunités de demain.
-          </p>
-
-          <div className="hero-actions">
-            <Link href="/projects" className="button button-primary">
-              Découvrir nos projets
-              <span>→</span>
-            </Link>
-
-            <Link href="/about" className="button button-secondary">
-              Découvrir Wallu
-            </Link>
-          </div>
+      <div className="hero-video-content">
+        <div className="hero-video-badge">
+          <span className="hero-badge-dot" />
+          Innovation technologique africaine
         </div>
 
-        <div className="hero-visual">
-          <div className="hero-card hero-card-main">
-            <div className="hero-card-header">
-              <span className="status-dot" />
-              Wallu Group
-            </div>
+        <h1>
+          Nous créons la technologie
+          <span> qui fait avancer l&apos;Afrique.</span>
+        </h1>
 
-            <div className="hero-card-content">
-              <span>Innovation</span>
-              <strong>∞</strong>
-              <small>Ideas → Impact</small>
-            </div>
-          </div>
+        <div className="hero-actions">
+          <Link href="/projects" className="button button-primary">
+            Découvrir nos projets
+            <span>→</span>
+          </Link>
 
-          <div className="floating-card floating-card-one">
-            <span>AI</span>
-            <p>Intelligence</p>
-          </div>
-
-          <div className="floating-card floating-card-two">
-            <span>01</span>
-            <p>Impact</p>
-          </div>
+          <Link href="/about" className="button hero-video-button">
+            Découvrir Wallu
+          </Link>
         </div>
       </div>
 
-      <div className="hero-bottom">
-        <span>TECHNOLOGY</span>
-        <span>INNOVATION</span>
-        <span>IMPACT</span>
-      </div>
+      <a href="#nouveautes" className="hero-video-scroll" aria-label="Défiler vers les nouveautés">
+        <span />
+      </a>
     </section>
   );
 }
