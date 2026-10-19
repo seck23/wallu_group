@@ -1,7 +1,14 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "../../components/layout/PageBanner";
 import { projects } from "../../data/projects";
+
+export const metadata: Metadata = {
+  title: "Projets",
+  description:
+    "Tontouma Bot, SenTourism, Sénégal-Rek : les projets technologiques de Wallu Group.",
+};
 
 export default function ProjectsPage() {
   return (

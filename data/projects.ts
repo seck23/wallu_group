@@ -14,6 +14,12 @@ export const projects = [
     tags: ["IA", "GovTech", "NLP"],
 
     image: "/images/projets/tontouma-bot.jpg",
+    // rendu détouré sur blanc : à montrer en entier, sans recadrage
+    imageEntiere: true,
+
+    video: "/videos/pub-tontouma-bot.mp4",
+    videoPoster: "/images/projets/pub-tontouma-bot.jpg",
+    demo: "https://www.tontoumabot.com/demo",
 
     status: "En développement",
 

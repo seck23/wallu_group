@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { id } = await params;
   const project = projects.find((p) => p.id === id);
   return {
-    title: project ? `${project.name} | Wallu Group` : "Projet | Wallu Group",
+    title: project ? project.name : "Projet",
     description: project?.shortDescription,
   };
 }
@@ -54,9 +54,19 @@ export default async function ProjectPage({
               </div>
 
               <span className="project-status">{project.status}</span>
+
+              {"demo" in project && project.demo ? (
+                <div className="hero-actions">
+                  <a href={project.demo} className="button button-primary" target="_blank" rel="noopener noreferrer">
+                    Essayer la démo <span>↗</span>
+                  </a>
+                </div>
+              ) : null}
             </div>
 
-            <div className="project-detail-visual">
+            <div
+              className={`project-detail-visual${"imageEntiere" in project && project.imageEntiere ? " is-contain" : ""}`}
+            >
               {project.image ? (
                 <Image
                   src={project.image}
@@ -72,6 +82,30 @@ export default async function ProjectPage({
           </div>
         </div>
       </section>
+
+      {"video" in project && project.video ? (
+        <section className="project-detail-video">
+          <div className="section-container project-detail-video-grid">
+            <div>
+              <div className="section-label">EN VIDÉO</div>
+              <h2>Le boîtier, en vingt secondes.</h2>
+              <p>
+                Le boîtier conçu et imprimé par l’équipe : capteur de présence,
+                haut-parleurs, et trois voyants qui indiquent quand parler,
+                patienter et écouter.
+              </p>
+            </div>
+            <video
+              src={project.video}
+              poster={"videoPoster" in project ? project.videoPoster : undefined}
+              controls
+              playsInline
+              preload="none"
+              className="project-detail-video-player"
+            />
+          </div>
+        </section>
+      ) : null}
 
       <section className="project-detail-body">
         <div className="section-container project-detail-columns">

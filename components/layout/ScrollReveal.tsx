@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 const CIBLES = [
   ".section-label",
   "main section h2",
+  ".figure",
+  ".demo-visual",
   ".intro-grid p",
   ".news-card",
   ".project-card",

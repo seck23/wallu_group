@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "../../components/layout/PageBanner";
 
@@ -60,6 +61,12 @@ const skills = [
   "Réseaux & Télécoms",
   "Innovation produit",
 ];
+
+export const metadata: Metadata = {
+  title: "Équipe",
+  description:
+    "L’équipe Wallu Group : intelligence artificielle, génie logiciel, systèmes d’information, réseaux et produit.",
+};
 
 export default function TeamPage() {
   return (

@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "../../components/layout/PageBanner";
 import ContactForm from "../../components/contact/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contactez Wallu Group à Dakar : projets, partenariats, collaborations.",
+};
 
 export default function ContactPage() {
   return (

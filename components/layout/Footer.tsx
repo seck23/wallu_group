@@ -74,7 +74,11 @@ export default function Footer() {
             <a href="tel:+221778503529">
               +221 77 850 35 29
             </a>
+            <a href="tel:+221781303605">
+              +221 78 130 36 05
+            </a>
 
+            <span>Forge ESP, École Supérieure Polytechnique</span>
             <span>Dakar, Sénégal</span>
 
             <div className="footer-social">

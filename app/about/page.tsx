@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "../../components/layout/PageBanner";
+
+export const metadata: Metadata = {
+  title: "À propos",
+  description:
+    "Wallu Group, startup technologique africaine basée à Dakar : notre vision, notre mission et notre approche.",
+};
 
 export default function AboutPage() {
   return (

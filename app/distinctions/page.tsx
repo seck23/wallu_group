@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "../../components/layout/PageBanner";
 
@@ -51,6 +52,12 @@ const distinctions = [
     highlight: "Délégation Sénégal",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Distinctions",
+  description:
+    "Gov’athon 2025, Forge ESP, Africonnect+, Force N, GITEX Africa : le parcours de Wallu Group.",
+};
 
 export default function DistinctionsPage() {
   return (
