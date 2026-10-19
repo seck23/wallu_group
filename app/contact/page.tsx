@@ -1,8 +1,12 @@
 import Link from "next/link";
+import PageBanner from "../../components/layout/PageBanner";
+import ContactForm from "../../components/contact/ContactForm";
 
 export default function ContactPage() {
   return (
     <main className="contact-page">
+      <PageBanner title="Contact" image="/images/bandeaux/contact.jpg" position="center 30%" />
+
 
       {/* HERO */}
       <section className="contact-hero">
@@ -25,7 +29,7 @@ export default function ContactPage() {
             <div className="contact-intro">
               <p>
                 Vous avez une idée, un projet, un besoin technologique
-                ou simplement envie d'échanger avec nous ?
+                ou simplement envie d’échanger avec nous ?
               </p>
 
               <p>
@@ -54,12 +58,12 @@ export default function ContactPage() {
               <h2>
                 Une idée mérite
                 <br />
-                d'être <span>partagée.</span>
+                d’être <span>partagée.</span>
               </h2>
 
               <p className="contact-description">
                 Que vous soyez entrepreneur, organisation, entreprise,
-                institution ou simplement porteur d'une idée, nous sommes
+                institution ou simplement porteur d’une idée, nous sommes
                 ouverts aux échanges et aux collaborations.
               </p>
 
@@ -73,8 +77,17 @@ export default function ContactPage() {
                 </div>
 
                 <div className="contact-detail">
+                  <span>Téléphone</span>
+                  <p>
+                    <a href="tel:+221778503529">+221 77 850 35 29</a>
+                    {" · "}
+                    <a href="tel:+221781303605">+221 78 130 36 05</a>
+                  </p>
+                </div>
+
+                <div className="contact-detail">
                   <span>Localisation</span>
-                  <p>Dakar, Sénégal</p>
+                  <p>Forge ESP, École Supérieure Polytechnique — Dakar, Sénégal</p>
                 </div>
 
                 <div className="contact-detail">
@@ -91,87 +104,7 @@ export default function ContactPage() {
             {/* FORM */}
             <div className="contact-form-wrapper">
 
-              <form className="contact-form">
-
-                <div className="contact-form-row">
-
-                  <div className="contact-field">
-                    <label htmlFor="name">
-                      Nom
-                    </label>
-
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-
-                  <div className="contact-field">
-                    <label htmlFor="email">
-                      Email
-                    </label>
-
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="votre@email.com"
-                    />
-                  </div>
-
-                </div>
-
-                <div className="contact-field">
-                  <label htmlFor="subject">
-                    Sujet
-                  </label>
-
-                  <select id="subject" name="subject">
-                    <option value="">
-                      Choisir un sujet
-                    </option>
-
-                    <option value="project">
-                      Un projet
-                    </option>
-
-                    <option value="partnership">
-                      Un partenariat
-                    </option>
-
-                    <option value="collaboration">
-                      Une collaboration
-                    </option>
-
-                    <option value="other">
-                      Autre
-                    </option>
-                  </select>
-                </div>
-
-                <div className="contact-field">
-                  <label htmlFor="message">
-                    Message
-                  </label>
-
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={7}
-                    placeholder="Parlez-nous de votre projet..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="button button-primary contact-submit"
-                >
-                  Envoyer le message →
-                </button>
-
-              </form>
+              <ContactForm />
 
             </div>
 

@@ -4271,3 +4271,244 @@ textarea {
     height: 300px;
   }
 }
+
+/* ================================================================
+   PAGES INTÉRIEURES — BANDEAU PHOTO ET FIL D'ARIANE
+================================================================ */
+
+.page-banner {
+  position: relative;
+  min-height: 420px;
+  height: 52vh;
+  max-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--primary-dark);
+}
+
+.page-banner-image {
+  object-fit: cover;
+}
+
+.page-banner-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(7, 26, 45, 0.85) 0%, rgba(7, 26, 45, 0.35) 55%, rgba(7, 26, 45, 0.15) 100%);
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 2;
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0 0 56px;
+  color: var(--white);
+}
+
+.page-banner-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.page-banner-crumbs a:hover {
+  color: var(--accent);
+}
+
+.page-banner-crumbs [aria-current] {
+  color: var(--accent);
+}
+
+.page-banner-title {
+  margin-top: 14px;
+  font-size: clamp(40px, 5.4vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+/* Le premier bloc sous le bandeau n'a plus à laisser de place à la barre de navigation */
+.page-banner + section {
+  padding-top: 96px;
+}
+
+/* Projets : vraies images */
+.project-list-photo {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-list-item:hover .project-list-photo {
+  transform: scale(1.03);
+}
+
+/* Équipe : vraies photos */
+.team-member-avatar {
+  overflow: hidden;
+}
+
+.team-member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact : message après envoi */
+.contact-form-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-detail a:hover {
+  color: var(--accent-dark);
+}
+
+@media (max-width: 900px) {
+  .page-banner {
+    min-height: 320px;
+    height: 44vh;
+  }
+
+  .page-banner-content {
+    width: calc(100% - 40px);
+    padding-bottom: 40px;
+  }
+
+  .page-banner + section {
+    padding-top: 64px;
+  }
+}
+
+/* ================================================================
+   ANIMATIONS
+   Tout est désactivé si le visiteur a demandé moins d'animations.
+================================================================ */
+
+/* Apparition au défilement — les éléments ne sont masqués que si le
+   script a bien démarré (classe js-reveal), sinon tout reste visible. */
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Les cartes gardent leur propre transition de survol une fois apparues */
+.js-reveal .news-card.reveal.is-visible,
+.js-reveal .project-card.reveal.is-visible {
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Entrée de l'ouverture vidéo, par étapes */
+@keyframes monte {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fondu {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-video-media {
+  animation: fondu 1.4s ease both;
+}
+
+.hero-video-badge {
+  animation: monte 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.hero-video h1 {
+  animation: monte 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+.hero-video h1 span {
+  animation: monte 1s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+}
+
+.hero-video .hero-actions {
+  animation: monte 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+}
+
+.hero-video-scroll {
+  animation: fondu 1s ease 1.4s both;
+}
+
+/* Bandeaux des pages : zoom lent et titre qui monte */
+@keyframes zoom-lent {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+
+.page-banner-image {
+  animation: zoom-lent 9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-banner-crumbs {
+  animation: monte 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.page-banner-title {
+  animation: monte 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+/* Barre de navigation : ombre dès qu'on défile */
+.navbar {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.is-scrolled .navbar {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 30px rgba(11, 37, 64, 0.08);
+}
+
+/* Bouton Vision : la flèche avance au survol */
+.vision-cta span,
+.news-more span {
+  transition: transform 0.3s ease;
+}
+
+.vision-cta:hover span,
+.news-card:hover .news-more span {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-media,
+  .hero-video-badge,
+  .hero-video h1,
+  .hero-video h1 span,
+  .hero-video .hero-actions,
+  .hero-video-scroll,
+  .hero-video-scroll span,
+  .page-banner-image,
+  .page-banner-crumbs,
+  .page-banner-title {
+    animation: none;
+  }
+
+  .js-reveal .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

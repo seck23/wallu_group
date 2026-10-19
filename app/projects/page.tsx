@@ -1,9 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
+import PageBanner from "../../components/layout/PageBanner";
 import { projects } from "../../data/projects";
 
 export default function ProjectsPage() {
   return (
     <main className="projects-page">
+      <PageBanner title="Projets" image="/images/bandeaux/projets.jpg" position="center 55%" />
+
       {/* HERO */}
       <section className="projects-page-hero">
         <div className="projects-page-container">
@@ -21,8 +25,8 @@ export default function ProjectsPage() {
             <div className="projects-page-intro">
               <p>
                 Wallu Group développe des projets technologiques à la
-                croisée de l'intelligence artificielle, du numérique,
-                de la culture et de l'innovation.
+                croisée de l’intelligence artificielle, du numérique,
+                de la culture et de l’innovation.
               </p>
 
               <p>
@@ -38,15 +42,27 @@ export default function ProjectsPage() {
       <section className="projects-list-section">
         <div className="projects-page-container">
           <div className="projects-list">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <article className="project-list-item" key={project.id}>
                 <div className="project-list-number">
                   {project.number}
                 </div>
 
                 <div className="project-list-visual">
-                  <div className="project-list-glow" />
-                  <span>{project.number}</span>
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      sizes="(max-width: 900px) 90vw, 480px"
+                      className="project-list-photo"
+                    />
+                  ) : (
+                    <>
+                      <div className="project-list-glow" />
+                      <span>{project.number}</span>
+                    </>
+                  )}
                 </div>
 
                 <div className="project-list-content">
@@ -93,7 +109,7 @@ export default function ProjectsPage() {
               </div>
 
               <h2>
-                D'autres idées
+                D’autres idées
                 <br />
                 sont déjà en cours.
               </h2>
@@ -103,7 +119,7 @@ export default function ProjectsPage() {
               <p>
                 Wallu Group est pensé comme un laboratoire de projets.
                 Certaines idées deviennent des produits, certaines
-                évoluent en plateformes indépendantes et d'autres
+                évoluent en plateformes indépendantes et d’autres
                 donnent naissance à de nouvelles collaborations.
               </p>
 

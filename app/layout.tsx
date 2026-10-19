@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import ScrollReveal from "../components/layout/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Wallu Group | Innovation technologique africaine",
@@ -22,6 +23,8 @@ export default function RootLayout({
         {children}
 
         <Footer />
+
+        <ScrollReveal />
       </body>
     </html>
   );
