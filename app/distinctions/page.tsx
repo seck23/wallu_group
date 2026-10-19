@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import PageBanner from "../../components/layout/PageBanner";
 
 const distinctions = [
   {
@@ -51,9 +53,17 @@ const distinctions = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Distinctions",
+  description:
+    "Gov’athon 2025, Forge ESP, Africonnect+, Force N, GITEX Africa : le parcours de Wallu Group.",
+};
+
 export default function DistinctionsPage() {
   return (
     <main className="distinctions-page">
+      <PageBanner title="Distinctions" image="/images/bandeaux/distinctions.jpg" position="center 45%" />
+
 
       {/* HERO */}
       <section className="distinctions-hero">
@@ -77,8 +87,8 @@ export default function DistinctionsPage() {
 
             <div className="distinctions-hero-intro">
               <p>
-                Notre parcours est fait de concours, d'accompagnements,
-                de rencontres et d'opportunités qui nous permettent de
+                Notre parcours est fait de concours, d’accompagnements,
+                de rencontres et d’opportunités qui nous permettent de
                 faire grandir Wallu Group.
               </p>
 

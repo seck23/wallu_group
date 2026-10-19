@@ -1,11 +1,20 @@
 import Link from "next/link";
 import Hero from "../components/home/Hero";
 import ProjectsPreview from "../components/home/ProjectsPreview";
+import Nouveautes from "../components/home/Nouveautes";
+import Vision from "../components/home/Vision";
+import Chiffres from "../components/home/Chiffres";
+import Partenaires from "../components/home/Partenaires";
+import Demo from "../components/home/Demo";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+
+      <Nouveautes />
+
+      <Chiffres />
 
       <section className="intro-section">
         <div className="section-container">
@@ -35,6 +44,12 @@ export default function Home() {
       </section>
 
       <ProjectsPreview />
+
+      <Demo />
+
+      <Partenaires />
+
+      <Vision />
     </main>
   );
 }

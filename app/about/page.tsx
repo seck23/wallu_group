@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import PageBanner from "../../components/layout/PageBanner";
+
+export const metadata: Metadata = {
+  title: "À propos",
+  description:
+    "Wallu Group, startup technologique africaine basée à Dakar : notre vision, notre mission et notre approche.",
+};
 
 export default function AboutPage() {
   return (
     <main className="about-page">
+      <PageBanner title="À propos" image="/images/bandeaux/a-propos.jpg" position="center 45%" />
+
 
       {/* HERO */}
       <section className="about-hero">
@@ -15,7 +25,7 @@ export default function AboutPage() {
                 Nous croyons que
                 <br />
                 la technologie doit
-                <span> servir l'impact.</span>
+                <span> servir l’impact.</span>
               </h1>
             </div>
 
@@ -26,7 +36,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Nous explorons l'intelligence artificielle, le numérique
+                Nous explorons l’intelligence artificielle, le numérique
                 et les technologies émergentes pour répondre à des
                 problématiques réelles et créer de nouvelles opportunités.
               </p>
@@ -44,11 +54,11 @@ export default function AboutPage() {
             <h2>
               Construire des technologies
               <br />
-              pensées <span>depuis l'Afrique</span>
+              pensées <span>depuis l’Afrique</span>
               <br />
               pour répondre aux enjeux
               <br />
-              d'aujourd'hui et de demain.
+              d’aujourd’hui et de demain.
             </h2>
           </div>
         </div>
@@ -78,15 +88,15 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Nous partons d'un besoin concret, nous expérimentons,
-                construisons et améliorons nos solutions jusqu'à leur
+                Nous partons d’un besoin concret, nous expérimentons,
+                construisons et améliorons nos solutions jusqu’à leur
                 donner une véritable utilité.
               </p>
 
               <p>
-                Pour nous, l'innovation ne consiste pas simplement à
+                Pour nous, l’innovation ne consiste pas simplement à
                 utiliser une nouvelle technologie. Elle consiste à
-                l'utiliser de la bonne manière pour créer de la valeur.
+                l’utiliser de la bonne manière pour créer de la valeur.
               </p>
             </div>
 
@@ -102,9 +112,9 @@ export default function AboutPage() {
 
           <div className="about-approach-heading">
             <h2>
-              De l'idée
+              De l’idée
               <br />
-              à <span>l'impact.</span>
+              à <span>l’impact.</span>
             </h2>
 
             <p>
@@ -143,8 +153,8 @@ export default function AboutPage() {
               <h3>Construire</h3>
 
               <p>
-                Transformer l'idée en une solution concrète, fonctionnelle
-                et capable d'évoluer.
+                Transformer l’idée en une solution concrète, fonctionnelle
+                et capable d’évoluer.
               </p>
             </div>
 
@@ -155,7 +165,7 @@ export default function AboutPage() {
 
               <p>
                 Mesurer la valeur créée et faire évoluer la solution pour
-                qu'elle puisse toucher davantage d'utilisateurs.
+                qu’elle puisse toucher davantage d’utilisateurs.
               </p>
             </div>
 
@@ -175,7 +185,7 @@ export default function AboutPage() {
               <span>01</span>
               <h3>Utilité</h3>
               <p>
-                Nous construisons d'abord pour répondre à un besoin réel.
+                Nous construisons d’abord pour répondre à un besoin réel.
               </p>
             </div>
 

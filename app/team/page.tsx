@@ -1,4 +1,7 @@
+import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
+import PageBanner from "../../components/layout/PageBanner";
 
 const team = [
   {
@@ -11,6 +14,7 @@ const team = [
  {
     number: "02",
     name: "Aicha NDIAYE",
+    photo: "/images/equipe/aicha-ndiaye.jpg",
     role: "Innovation & Produit",
     description:
       "De l'idée au produit, avec une attention particulière portée aux usages.",
@@ -19,6 +23,7 @@ const team = [
   {
     number: "03",
     name: "Mouhamed SECK",
+    photo: "/images/equipe/mouhamed-seck.jpg",
     role: "Technologie & Développement",
     description:
       "Développement de solutions et exploration de nouvelles technologies.",
@@ -57,9 +62,17 @@ const skills = [
   "Innovation produit",
 ];
 
+export const metadata: Metadata = {
+  title: "Équipe",
+  description:
+    "L’équipe Wallu Group : intelligence artificielle, génie logiciel, systèmes d’information, réseaux et produit.",
+};
+
 export default function TeamPage() {
   return (
     <main className="team-page">
+      <PageBanner title="Équipe" image="/images/bandeaux/equipe.jpg" position="center 40%" />
+
 
       {/* HERO */}
       <section className="team-hero">
@@ -80,13 +93,13 @@ export default function TeamPage() {
             <div className="team-hero-intro">
               <p>
                 Wallu Group est porté par une équipe de jeunes talents
-                réunis autour d'une même conviction : la technologie peut
-                devenir un véritable moteur d'impact.
+                réunis autour d’une même conviction : la technologie peut
+                devenir un véritable moteur d’impact.
               </p>
 
               <p>
                 Nos profils sont différents, nos compétences sont
-                complémentaires et c'est cette diversité qui nous permet
+                complémentaires et c’est cette diversité qui nous permet
                 de transformer des idées en projets concrets.
               </p>
             </div>
@@ -115,7 +128,7 @@ export default function TeamPage() {
       <section className="team-members-section">
         <div className="team-container">
 
-          <div className="section-label">L'ÉQUIPE WALLU</div>
+          <div className="section-label">L’ÉQUIPE WALLU</div>
 
           <div className="team-members-grid">
 
@@ -126,7 +139,17 @@ export default function TeamPage() {
                   <span>{member.number}</span>
 
                   <div className="team-member-avatar">
-                    <span>W</span>
+                    {"photo" in member && member.photo ? (
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        width={120}
+                        height={120}
+                        className="team-member-photo"
+                      />
+                    ) : (
+                      <span>W</span>
+                    )}
                   </div>
                 </div>
 
@@ -200,7 +223,7 @@ export default function TeamPage() {
             <div>
               <p>
                 Nous évoluons dans un environnement où les idées sont
-                encouragées, où l'expérimentation fait partie du processus
+                encouragées, où l’expérimentation fait partie du processus
                 et où chacun peut contribuer à la construction des projets.
               </p>
 
