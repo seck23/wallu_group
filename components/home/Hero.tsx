@@ -18,11 +18,6 @@ export default function Hero() {
       <div className="hero-video-shade" />
 
       <div className="hero-video-content">
-        <div className="hero-video-badge">
-          <span className="hero-badge-dot" />
-          Innovation technologique africaine
-        </div>
-
         <h1>
           Nous créons la technologie
           <span> qui fait avancer l&apos;Afrique.</span>
