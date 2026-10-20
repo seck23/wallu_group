@@ -55,7 +55,9 @@ export default function ProjectsPage() {
                   {project.number}
                 </div>
 
-                <div className="project-list-visual">
+                <div
+                  className={`project-list-visual${"imageEntiere" in project && project.imageEntiere ? " is-contain" : ""}`}
+                >
                   {project.image ? (
                     <Image
                       src={project.image}

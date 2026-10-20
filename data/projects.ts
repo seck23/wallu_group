@@ -94,39 +94,41 @@ export const projects = [
     id: "senegal-rek",
     number: "03",
     name: "Sénégal-Rek",
-    category: "IA · Culture · Société",
+    category: "Tourisme · Application mobile",
 
     shortDescription:
-      "Une initiative numérique destinée à faciliter la découverte et la compréhension du Sénégal.",
+      "L'application qui accompagne les visiteurs du Sénégal avant, pendant et après leur voyage.",
 
     description:
-      "Sénégal-Rek est une initiative qui utilise les technologies numériques et l'intelligence artificielle pour valoriser les connaissances, les histoires et les réalités du Sénégal.",
+      "Sénégal-Rek accompagne les visiteurs du Sénégal avant, pendant et après leur voyage. Le touriste ne manque pas d'offres : ce qui lui manque, ce sont des informations fiables et à jour, des interlocuteurs de confiance et de l'aide sur place. Sénégal-Rek réunit tout cela dans une seule application, et met en valeur les acteurs locaux — guides, artisans, hôtes, campements villageois — de Gorée à Saint-Louis, du Saloum à la Casamance.",
 
-    tags: ["IA", "Culture", "Innovation"],
+    tags: ["Tourisme", "Mobile", "VR"],
 
-    image: undefined as string | undefined,
+    image: "/images/projets/senegal-rek.jpg" as string | undefined,
+    // logo sur fond blanc : à montrer en entier, sans recadrage
+    imageEntiere: true,
 
     status: "Concept",
 
     problem:
-      "Une grande partie des connaissances liées à la culture, à l'histoire et aux réalités locales reste difficilement accessible sous une forme moderne et interactive.",
+      "Le voyageur ne manque pas d'offres, mais d'informations fiables et à jour, d'interlocuteurs de confiance et d'aide sur place. Il découvre souvent le pays une fois arrivé, sans repères.",
 
     solution:
-      "Sénégal-Rek cherche à rendre ces connaissances plus accessibles grâce à une expérience numérique adaptée aux usages actuels.",
+      "Avant le départ, des visites en réalité virtuelle — la Maison des Esclaves de Gorée, les ruelles de Saint-Louis, les bolongs du Saloum, le Lac Rose — pour choisir en connaissance de cause. Sur place, de l'aide pour se déplacer, trouver des guides et des prestataires reconnus, comprendre les codes culturels et obtenir de l'aide rapidement. Au retour, partager son expérience et préparer la prochaine visite.",
 
     technologies: [
-      "Artificial Intelligence",
-      "Knowledge Systems",
-      "Web",
-      "Digital Content",
+      "Application mobile",
+      "Réalité virtuelle",
+      "Visites 360°",
     ],
 
     features: [
-      "Découverte culturelle",
-      "Informations sur le Sénégal",
-      "Contenus interactifs",
-      "Recherche intelligente",
-      "Valorisation du patrimoine",
+      "Visites en réalité virtuelle avant le départ",
+      "Formalités et précautions de santé expliquées",
+      "Itinéraires adaptés à chaque profil",
+      "Guides et prestataires reconnus",
+      "Codes culturels et aide rapide sur place",
+      "Partage d'expérience et revisite après le voyage",
     ],
 
     featured: true,

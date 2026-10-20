@@ -4761,3 +4761,16 @@ textarea {
   object-fit: contain;
   padding: 18px;
 }
+
+/* Logos et rendus détourés sur blanc : affichés en entier dans les cartes */
+.project-card-visual.is-contain,
+.project-list-visual.is-contain {
+  background: var(--white);
+}
+
+.project-card-visual.is-contain img,
+.project-list-visual.is-contain img {
+  object-fit: contain;
+  padding: 22px;
+  opacity: 1;
+}

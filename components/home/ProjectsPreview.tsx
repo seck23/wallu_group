@@ -36,7 +36,9 @@ export default function ProjectsPreview() {
                 <span className="project-arrow">↗</span>
               </div>
 
-              <div className="project-card-visual">
+              <div
+                className={`project-card-visual${"imageEntiere" in project && project.imageEntiere ? " is-contain" : ""}`}
+              >
                 {project.image ? (
                   <Image
                     src={project.image}
