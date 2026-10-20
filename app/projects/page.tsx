@@ -7,7 +7,7 @@ import { projects } from "../../data/projects";
 export const metadata: Metadata = {
   title: "Projets",
   description:
-    "Tontouma Bot, SenTourism, Sénégal-Rek : les projets technologiques de Wallu Group.",
+    "Tontouma Bot, SenTourism Virtuel, Sénégal-Rek : les projets technologiques de Wallu Group.",
 };
 
 export default function ProjectsPage() {

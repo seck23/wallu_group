@@ -29,7 +29,7 @@ export const actualites: Actualite[] = [
   {
     id: "visite-monument",
     tag: "Projet",
-    title: "SenTourism : le Monument de la Renaissance Africaine en 360°",
+    title: "SenTourism Virtuel : le Monument de la Renaissance Africaine en 360°",
     excerpt:
       "Dix-huit points de vue, une narration en français et en anglais, sur navigateur comme en casque de réalité virtuelle.",
     image: "/images/actus/visite-monument.jpg",

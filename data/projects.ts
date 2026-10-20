@@ -51,14 +51,14 @@ export const projects = [
   {
     id: "sentourism",
     number: "02",
-    name: "Sentourism",
+    name: "SenTourism Virtuel",
     category: "Tourisme · Expérience immersive",
 
     shortDescription:
-      "Une expérience numérique immersive pour découvrir le patrimoine et les destinations touristiques du Sénégal.",
+      "Des visites virtuelles des sites du Sénégal, capturées sur place à 360° et accessibles depuis un simple lien.",
 
     description:
-      "Sentourism explore la rencontre entre technologie et tourisme afin de proposer de nouvelles façons de découvrir les richesses culturelles, historiques et touristiques du Sénégal.",
+      "SenTourism Virtuel transforme une session de prises de vue à 360° sur un site réel en une visite navigable, sur navigateur comme en casque de réalité virtuelle. La première visite, celle du Monument de la Renaissance Africaine, est terminée : dix-huit points de vue, commentés en français et en anglais. C'est aussi la technologie des visites virtuelles de l'application Sénégal-Rek.",
 
     tags: ["Tourisme", "Digital", "VR"],
 
@@ -70,21 +70,21 @@ export const projects = [
       "Les destinations touristiques disposent d'un potentiel important mais restent parfois difficiles à découvrir avant même le déplacement.",
 
     solution:
-      "Sentourism utilise les technologies immersives et numériques pour permettre aux utilisateurs de découvrir les destinations sénégalaises de manière plus interactive.",
+      "Une chaîne entièrement maîtrisée par l'équipe — repérage, capture à la caméra 360°, traitement, montage, mise en ligne — et reproductible d'un site à l'autre. La visite s'ouvre sans installation ni compte, et peut s'intégrer dans le site d'un partenaire.",
 
     technologies: [
-      "Virtual Reality",
-      "360°",
-      "Interactive Experience",
+      "Capture 360°",
       "Web",
+      "Réalité virtuelle",
+      "Casque autonome",
     ],
 
     features: [
-      "Visites immersives",
-      "Découverte de destinations",
-      "Expériences 360°",
-      "Valorisation du patrimoine",
-      "Contenus interactifs",
+      "Visite du Monument de la Renaissance Africaine : 18 points de vue",
+      "Narration audio en français et en anglais",
+      "Points d'intérêt et faits sourcés",
+      "Sur navigateur, mobile et casque de réalité virtuelle",
+      "Intégrable dans le site d'un partenaire",
     ],
 
     featured: true,
@@ -114,7 +114,7 @@ export const projects = [
       "Le voyageur ne manque pas d'offres, mais d'informations fiables et à jour, d'interlocuteurs de confiance et d'aide sur place. Il découvre souvent le pays une fois arrivé, sans repères.",
 
     solution:
-      "Avant le départ, des visites en réalité virtuelle — la Maison des Esclaves de Gorée, les ruelles de Saint-Louis, les bolongs du Saloum, le Lac Rose — pour choisir en connaissance de cause. Sur place, de l'aide pour se déplacer, trouver des guides et des prestataires reconnus, comprendre les codes culturels et obtenir de l'aide rapidement. Au retour, partager son expérience et préparer la prochaine visite.",
+      "Avant le départ, des visites en réalité virtuelle réalisées avec SenTourism Virtuel — la Maison des Esclaves de Gorée, les ruelles de Saint-Louis, les bolongs du Saloum, le Lac Rose — pour choisir en connaissance de cause. Sur place, de l'aide pour se déplacer, trouver des guides et des prestataires reconnus, comprendre les codes culturels et obtenir de l'aide rapidement. Au retour, partager son expérience et préparer la prochaine visite.",
 
     technologies: [
       "Application mobile",
