@@ -2,8 +2,8 @@
 /* Wallu Group — ouverture immersive */
 .wg-hero{--hero-progress:0;--hero-scale:1;--hero-rise:0px;--hero-light:0;position:relative;height:155svh;background:#f4f8fb;color:#fff}
 .wg-hero-stage{position:sticky;top:0;isolation:isolate;height:100svh;min-height:640px;overflow:hidden;background:radial-gradient(ellipse at 76% 48%,rgba(0,212,255,.16),transparent 34%),radial-gradient(ellipse at 18% 86%,rgba(0,212,255,.08),transparent 38%),#071a2d}
-.wg-hero-light{position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,#f4f8fb,#fff);opacity:var(--hero-light);pointer-events:none}
-.wg-hero-grid{position:absolute;inset:-1px;z-index:-1;opacity:calc(.2 - var(--hero-progress)*.12);background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 62% 50%,#000,transparent 72%)}
+.wg-hero-light{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,#f4f8fb,#fff);opacity:var(--hero-light);pointer-events:none}
+.wg-hero-grid{position:absolute;inset:-1px;z-index:1;opacity:calc(.2 - var(--hero-progress)*.12);background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 62% 50%,#000,transparent 72%)}
 .wg-hero-topline,.wg-hero-footer{position:absolute;z-index:5;left:clamp(22px,5vw,76px);right:clamp(22px,5vw,76px);display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:10px;font-weight:700;letter-spacing:.16em}
 .wg-hero-topline{top:32px}.wg-hero-topline>span:first-child{color:#fff}.wg-hero-status{display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,.64)}.wg-hero-status i{display:block;width:6px;height:6px;border-radius:50%;background:#00d4ff;box-shadow:0 0 16px #00d4ff}
 .wg-hero-content{position:absolute;z-index:3;top:50%;left:clamp(22px,10vw,150px);width:min(780px,64vw);transform:translateY(calc(-50% + var(--hero-rise))) scale(var(--hero-scale));transform-origin:left center}
