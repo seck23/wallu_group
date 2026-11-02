@@ -2,56 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "../../components/layout/PageBanner";
-
-const team = [
-  {
-    number: "01",
-    name: "Elhadj Youssoupha MBAYE",
-    role: "AI & Big Data",
-    description:
-      "Intelligence artificielle, data et conception de solutions intelligentes.",
-  },
- {
-    number: "02",
-    name: "Aicha NDIAYE",
-    photo: "/images/equipe/aicha-ndiaye.jpg",
-    role: "Innovation & Produit",
-    description:
-      "De l'idée au produit, avec une attention particulière portée aux usages.",
-  },
-
-  {
-    number: "03",
-    name: "Mouhamed SECK",
-    photo: "/images/equipe/mouhamed-seck.jpg",
-    role: "Technologie & Développement",
-    description:
-      "Développement de solutions et exploration de nouvelles technologies.",
-  },
-
-  {
-    number: "04",
-    name: "Moussa NDOYE",
-    role: "Génie logiciel",
-    description:
-      "Conception et développement de solutions numériques robustes et évolutives.",
-  },
-
-  {
-    number: "05",
-    name: "Cheikh DEME",
-    role: "Systèmes d'information",
-    description:
-      "Architecture logicielle, systèmes d'information et transformation numérique.",
-  },
-  {
-    number: "06",
-    name: "Assane THIAO",
-    role: "Réseaux & Télécoms",
-    description:
-      "Infrastructure, connectivité et technologies réseaux.",
-  },
-];
+import { equipe } from "../../data/equipe";
 
 const skills = [
   "Intelligence artificielle",
@@ -111,15 +62,17 @@ export default function TeamPage() {
       <section className="team-statement-section">
         <div className="team-container">
 
-          <div className="section-label">NOTRE FORCE</div>
+          <div className="team-statement">
+            <div className="section-label">NOTRE FORCE</div>
 
-          <h2>
-            Nous ne sommes pas seulement
-            <br />
-            une équipe de développeurs.
-            <br />
-            Nous sommes des <span>constructeurs.</span>
-          </h2>
+            <h2>
+              Nous ne sommes pas seulement
+              <br />
+              une équipe de développeurs.
+              <br />
+              Nous sommes des <span>constructeurs.</span>
+            </h2>
+          </div>
 
         </div>
       </section>
@@ -132,35 +85,59 @@ export default function TeamPage() {
 
           <div className="team-members-grid">
 
-            {team.map((member) => (
-              <article className="team-member" key={member.number}>
+            {equipe.map((membre, i) => (
+              <article className="team-member" key={membre.nom}>
 
                 <div className="team-member-top">
-                  <span>{member.number}</span>
+                  <span>{String(i + 1).padStart(2, "0")}</span>
 
                   <div className="team-member-avatar">
-                    {"photo" in member && member.photo ? (
+                    {membre.photo ? (
                       <Image
-                        src={member.photo}
-                        alt={member.name}
+                        src={membre.photo}
+                        alt={membre.nom}
                         width={120}
                         height={120}
                         className="team-member-photo"
                       />
                     ) : (
-                      <span>W</span>
+                      <span>
+                        {membre.nom
+                          .split(" ")
+                          .filter(Boolean)
+                          .map((m) => m[0])
+                          .slice(0, 2)
+                          .join("")}
+                      </span>
                     )}
                   </div>
                 </div>
 
                 <div className="team-member-content">
-                  <div className="team-member-role">
-                    {member.role}
-                  </div>
+                  <div className="team-member-role">{membre.poste}</div>
 
-                  <h3>{member.name}</h3>
+                  <h3>{membre.nom}</h3>
 
-                  <p>{member.description}</p>
+                  <p>{membre.bio}</p>
+
+                  {membre.competences.length ? (
+                    <ul className="team-member-skills">
+                      {membre.competences.map((c) => (
+                        <li key={c}>{c}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+
+                  {membre.linkedin ? (
+                    <a
+                      href={membre.linkedin}
+                      className="team-member-linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      LinkedIn <span>↗</span>
+                    </a>
+                  ) : null}
                 </div>
 
               </article>

@@ -2518,7 +2518,8 @@ a {
   border-top: 2px solid var(--accent);
 }
 
-.team-statement p {
+.team-statement p,
+.team-statement h2 {
   margin: 0;
   color: var(--primary);
   font-size: clamp(30px, 4vw, 52px);
@@ -2527,7 +2528,8 @@ a {
   font-weight: 700;
 }
 
-.team-statement p span {
+.team-statement p span,
+.team-statement h2 span {
   color: var(--accent);
 }
 
@@ -4773,4 +4775,46 @@ textarea {
   object-fit: contain;
   padding: 22px;
   opacity: 1;
+}
+
+/* Équipe : compétences et LinkedIn */
+.team-member-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+  list-style: none;
+}
+
+.team-member-skills li {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--light);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.team-member-linkedin {
+  display: inline-flex;
+  gap: 6px;
+  margin-top: 18px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.team-member-linkedin span {
+  color: var(--accent-dark);
+  transition: transform 0.25s ease;
+}
+
+.team-member-linkedin:hover span {
+  transform: translate(2px, -2px);
+}
+
+.team-member-avatar span {
+  font-size: 15px;
+  letter-spacing: 0.02em;
 }
