@@ -68,8 +68,8 @@ export default function Footer() {
           <div className="footer-contact">
             <div className="footer-label">Contact</div>
 
-            <a href="mailto:contact@wallu.group">
-              contact@wallu.group
+            <a href="mailto:contact@wallugroup.com">
+              contact@wallugroup.com
             </a>
             <a href="tel:+221778503529">
               +221 77 850 35 29

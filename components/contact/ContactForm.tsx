@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const DESTINATAIRE = "contact@wallu.group";
+const DESTINATAIRE = "contact@wallugroup.com";
 
 const SUJETS: Record<string, string> = {
   project: "Un projet",
