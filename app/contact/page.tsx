@@ -78,9 +78,9 @@ export default function ContactPage() {
 
                 <div className="contact-detail">
                   <span>Email</span>
-                  <a href="mailto:contact@wallugroup.com">
-                    contact@wallugroup.com
-                  </a>
+                  <p>
+                    <a href="mailto:contact@wallugroup.com">contact@wallugroup.com</a>
+                  </p>
                 </div>
 
                 <div className="contact-detail">

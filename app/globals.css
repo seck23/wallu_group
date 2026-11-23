@@ -4818,3 +4818,10 @@ textarea {
   font-size: 15px;
   letter-spacing: 0.02em;
 }
+
+/* Logo officiel sur carte blanche : son bleu nuit serait invisible sur le pied de page. */
+.footer-logo {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--white);
+}
